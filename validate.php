@@ -20,7 +20,11 @@ session_start();
     $_SESSION['failed_attempts'] = $_SESSION['failed_attempts'] + 1;
   }
 
-  echo "This is unsuccessful attempt number " . $_SESSION['failed_attempts'];  }
+  echo "<p style='color:red;'>Login failed. Invalid username or password.</p>";
+  echo "<p>Attempt number: " . $_SESSION['failed_attempts'] . "</p>";
+  echo "<p><a href='/login.php'>Try again</a></p>";
+
+  }
   
   
 ?>
